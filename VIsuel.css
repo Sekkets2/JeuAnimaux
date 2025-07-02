@@ -1,0 +1,183 @@
+	html{
+		height:100%;
+		width:100%;
+		overflow:hidden; /*empêche barre droite*/
+	}
+	body{
+		background-image: url("Image/Prairie.jpg");
+		background-position:center;
+		background-size:cover;
+		background-repeat:no-repeat;
+		height:100%;
+		width:100%;
+		margin:0;
+		padding:0;
+	}
+	.bloquerAvCl{
+		pointer-events:none;
+		opacity:0.3;
+	}
+	.bloquerAvCl#Aideguide{
+		pointer-events:all;
+		opacity:1;
+	}
+
+	.conteneur{
+		display:flex;
+		justify-content:space-evenly;
+		align-items:center;
+		flex-direction:column;
+		gap:10px;
+		height:80%;
+		width:100%;
+	}
+		.conteneurBsPage{
+		display:flex;
+		justify-content:space-evenly;
+		align-items:center;
+		flex-direction:column;
+		gap:10px;
+		bottom:0px;
+		height:20%;
+		width:100%;
+	}
+	
+	.ScoreDiv{
+		flex-direction:row;
+		text-shadow:
+		1px 1px 0 white, 
+		-1px 1px 0 white, 
+		-1px -1px 0 white,
+		1px -1px 0 white;
+	}
+	
+	.MicroBouton{
+	    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+	}
+	.TitreDiff{
+		font-family: sans serif;
+		color: #fffef1;
+		font-size:30px;
+		text-shadow:
+		1px 1px 0 black, 
+		-1px 1px 0 black, 
+		-1px -1px 0 black,
+		1px -1px 0 black;
+	}
+	#Parole{
+		text-align:center;
+	}
+	
+	.ChoixVoix{
+	position:absolute;
+	top:0;
+	left:0;
+	margin:0;
+	padding:0;
+	}
+	
+	.MeilleurScore{
+	position:absolute;
+	top:92%;
+	left:0;
+	margin:0;
+	padding:0;
+	text-shadow:
+	1px 1px 0 white, 
+	-1px 1px 0 white, 
+	-1px -1px 0 white,
+	1px -1px 0 white;
+	}
+	
+	span#Idscore{    /*Style du score*/
+		color:#d2d2d2;
+		margin-left:10px;
+		text-shadow:
+		1px 1px 0 black, 
+		-1px 1px 0 black, 
+		-1px -1px 0 black,
+		1px -1px 0 black;
+	}
+	span#IdsMeilleurcore{ /* style meilleur score */
+		color:#d2d2d2;
+		margin-left:10px;
+		text-shadow:
+		1px 1px 0 black, 
+		-1px 1px 0 black, 
+		-1px -1px 0 black,
+		1px -1px 0 black;
+	}
+	
+		.ScorePoint10{ /* Ne fonctionne qu'en pleine ecran, je n'ai pas réussi à le faire se positionner correctement au changement de taille */
+		position:absolute;
+		font-size:25px;
+		left:54%;
+		bottom:76%;
+		animation-name:PointVic;
+		animation-iteration-count:1;
+		animation-duration:1.1s;
+		 display:none;
+	}
+	
+	.AideGuide{
+		font-family: sans serif;
+		color: #fffef1;
+		font-size:20px;
+		background-color:yellow;
+		border: solid black;
+		text-shadow:
+		1px 1px 0 black, 
+		-1px 1px 0 black, 
+		-1px -1px 0 black,
+		1px -1px 0 black;
+		
+	}
+	span{color:red}
+	
+	@keyframes PointVic {	
+
+		0%,100% {transform: translateY(0);} 
+		
+		25% {
+			transform: translateY(-10px);
+			opacity:1;
+		}
+		50% {
+			transform: translateY(-15px);
+			opacity:0.75;
+		}
+		75% {
+			transform: translateY(-20px);
+			opacity:0.5;
+		}
+		100% { 
+			transform: translateY(-25px);
+			opacity:0;
+		}
+	}
+	
+	.ColorAnim{
+		animation-name:ChangementCouleurTitre;
+		animation-iteration-count:1;
+		animation-duration:2s;
+	}
+		@keyframes ChangementCouleurTitre {	
+
+		0% {color:white;} 
+		
+		25% {
+			color:green;
+		}
+		50% {
+			color:yellow;
+		}
+		75% {
+			color:purple;
+		}
+		100% { 
+			color:white;
+		}
+	}
